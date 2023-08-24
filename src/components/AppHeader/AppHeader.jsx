@@ -31,7 +31,7 @@ export const AppHeader = () => {
         <option value="complete">complete</option>
       </SelectButton>
       <Button variant="secondary" onClick={toggleDarkMode}>
-        Toggle Dark Mode
+        Dark Mode
       </Button>
       <TodoModal type="add" modalOpen={modalOpen} setModalOpen={setModalOpen} />
     </div>
