@@ -6,6 +6,8 @@
   margin: 0;
   padding: 0;
 }
+
+/* Define colors for both light and dark modes */
 :root {
   --primaryPurple: #646ff0;
   --black-1: #646681;
@@ -17,21 +19,44 @@
   --gray-2: #dedfe1;
   --black: black;
   --white: white;
+
+  /* Light mode colors */
+  --light-bg: var(--bg-1);
+  --light-text: #333;
+
+  /* Dark mode colors */
+  --dark-bg: #222;
+  --dark-text: #ddd;
+
+  /* Current theme colors (initially set to light mode) */
+  --current-bg: var(--light-bg);
+  --current-text: var(--light-text);
 }
+
 html {
   font-size: 10px;
 }
+
 body {
   font-family: "Rubik", sans-serif;
   width: 100%;
   min-height: 100vh;
-  background-color: var(--bg-1);
+  background-color: var(--current-bg); /* Use current background color */
+  color: var(--current-text); /* Use current text color */
 }
+
 * {
   font-family: "Rubik", sans-serif;
 }
+
 .container {
   width: 90%;
   max-width: 850px;
   margin: 0 auto;
+}
+
+/* Apply dark mode styles to elements when the 'dark-mode' class is added to the <html> element */
+.dark-mode {
+  --current-bg: var(--dark-bg);
+  --current-text: var(--dark-text);
 }
